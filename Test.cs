@@ -32,7 +32,7 @@ namespace Selenium
         {
             _WikiPage = new WikiPage(driver);
             _WikiPage.searchField.SendKeys(article);
-            Thread.Sleep(50);
+            Thread.Sleep(100);
             _WikiPage.searchBtn.Click();
         }
 
