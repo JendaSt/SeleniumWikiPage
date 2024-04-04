@@ -17,5 +17,11 @@
         public IWebElement firstHeading => driver.FindElement(By.Id("firstHeading"));
         public IWebElement pageTitle => firstHeading.FindElement(By.ClassName("mw-page-title-main"));
         public IWebElement wikiLink => bodyContent.FindElement(By.CssSelector("[href ^= '/wiki/']"));
+
+        public IWebElement GetLink()
+        {           
+            Console.WriteLine("-> " + wikiLink.Text);
+            return wikiLink;
+        }
     }
 }

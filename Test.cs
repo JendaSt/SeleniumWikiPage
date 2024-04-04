@@ -41,8 +41,8 @@ namespace Selenium
             _WikiPage = new WikiPage(driver);            
             int i = 0; 
             do
-            {                
-                GetLink().Click();
+            {
+                _WikiPage.GetLink().Click();
                 Console.WriteLine(_WikiPage.pageTitle.Text);
                 i++;
             }
@@ -52,12 +52,6 @@ namespace Selenium
             Console.WriteLine("Number of redirect = " + i);
         }
 
-        public IWebElement GetLink()
-        {
-            _WikiPage = new WikiPage(driver);
-            IWebElement link = _WikiPage.wikiLink;
-            Console.WriteLine("-> " + link.Text);
-            return link;
-        }
+        
     }
 }
