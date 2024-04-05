@@ -10,7 +10,7 @@ namespace Selenium
     public class Test
     {
         private IWebDriver driver = new ChromeDriver();
-        private WikiPage? _WikiPage;
+        private WikiPage _WikiPage;
         private string page = "Filozofie";
 
         [Test]
@@ -37,8 +37,7 @@ namespace Selenium
         }
 
         public void RedirectPage()
-        {
-            _WikiPage = new WikiPage(driver);            
+        {           
             int i = 0; 
             do
             {
